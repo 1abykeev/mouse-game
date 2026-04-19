@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Mouse Masters - Level Complete</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@700;800&amp;family=Be_Vietnam_Pro:wght@400;500;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            "colors": {
+                    "outline": "#646dc8",
+                    "error": "#ff6e84",
+                    "outline-variant": "#353e97",
+                    "secondary-fixed": "#3fff8b",
+                    "secondary-fixed-dim": "#24f07e",
+                    "surface-container-high": "#000873",
+                    "primary-fixed-dim": "#edc600",
+                    "primary-dim": "#edc600",
+                    "on-tertiary": "#481900",
+                    "tertiary-fixed": "#ff955e",
+                    "background": "#000341",
+                    "surface-container-lowest": "#000000",
+                    "on-primary": "#635200",
+                    "tertiary-fixed-dim": "#ff7f36",
+                    "on-surface": "#e3e3ff",
+                    "on-tertiary-fixed-variant": "#642600",
+                    "primary-container": "#fdd400",
+                    "on-primary-fixed-variant": "#645300",
+                    "inverse-primary": "#715d00",
+                    "on-tertiary-fixed": "#2f0e00",
+                    "tertiary-dim": "#ff7520",
+                    "on-primary-container": "#594a00",
+                    "on-secondary-fixed": "#004820",
+                    "on-error-container": "#ffb2b9",
+                    "on-secondary-container": "#e3ffe4",
+                    "error-container": "#a70138",
+                    "surface-variant": "#000b84",
+                    "on-background": "#e3e3ff",
+                    "on-error": "#490013",
+                    "surface-tint": "#ffe483",
+                    "on-surface-variant": "#9ba4ff",
+                    "error-dim": "#d73357",
+                    "surface-container-highest": "#000b84",
+                    "on-secondary-fixed-variant": "#006832",
+                    "surface-bright": "#000e96",
+                    "tertiary-container": "#fd6c00",
+                    "on-tertiary-container": "#321000",
+                    "surface-container": "#000662",
+                    "surface": "#000341",
+                    "inverse-on-surface": "#434ca5",
+                    "inverse-surface": "#fbf8ff",
+                    "on-secondary": "#005d2c",
+                    "secondary-container": "#006d35",
+                    "secondary-dim": "#24f07e",
+                    "primary-fixed": "#fdd400",
+                    "secondary": "#3fff8b",
+                    "surface-container-low": "#000450",
+                    "tertiary": "#ff833f",
+                    "primary": "#ffe483",
+                    "on-primary-fixed": "#433700",
+                    "surface-dim": "#000341"
+            },
+            "borderRadius": {
+                    "DEFAULT": "1rem",
+                    "lg": "2rem",
+                    "xl": "3rem",
+                    "full": "9999px"
+            },
+            "fontFamily": {
+                    "headline": ["Plus Jakarta Sans"],
+                    "body": ["Be Vietnam Pro"],
+                    "label": ["Plus Jakarta Sans"]
+            }
+          },
+        }
+      }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        .filled-icon {
+            font-variation-settings: 'FILL' 1;
+        }
+        .star-shadow {
+            filter: drop-shadow(0 0 15px rgba(255, 228, 131, 0.6));
+        }
+    </style>
+</head>
+<body class="bg-background font-body text-on-background overflow-hidden h-screen w-screen flex flex-col">
+<!-- Blurred Game Background Mock -->
+<div class="fixed inset-0 z-0 blur-md opacity-40 scale-105 pointer-events-none" data-alt="whimsical space-themed game level with glowing blue nebula clouds and floating cartoon planets and neon platforms" style="background-image: linear-gradient(rgba(0,3,65,0.7), rgba(0,3,65,0.7)), url('https://lh3.googleusercontent.com/aida-public/AB6AXuBNfA9T5ww9ODrv6c5jQEKPuS8s0DmmtqKbDzqkWjqejxLEU4MBh_i7-ZgpMFGBSJMnesKNpWxdB3Bkq8LHHnJ3l62cIfoGjRjCJw0wAJ5Bv6fkHcdadUVxepbUMsicDAFDFHKFkoV791GFCjMCxkUfpU3R1WvUfs0-q8yOcuO5PR8eqEznz9IPvmUOWzA69-peUskP39Tdn85vEIm8sLLvNOhatUl1PElM5_xTgUfG1lRzHuWg98f2Gc489uPkfnQlcFuYsSps68k'); background-size: cover; background-position: center;">
+</div>
+<!-- Top Navigation Anchor (Manual Implementation of Shared Components) -->
+<header class="fixed top-0 left-0 w-full z-50 flex justify-between items-center px-6 py-4 bg-[#000341]/60 backdrop-blur-xl rounded-b-3xl shadow-[0_10px_30px_rgba(255,228,131,0.1)]">
+<div class="text-2xl font-black text-yellow-400 uppercase font-headline tracking-wide">
+            Mouse Masters
+        </div>
+<div class="flex gap-6 items-center">
+<button class="text-white/70 hover:scale-105 hover:brightness-110 transition-all duration-300 active:scale-95">
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">timer</span>
+</button>
+<button class="text-white/70 hover:scale-105 hover:brightness-110 transition-all duration-300 active:scale-95">
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">stars</span>
+</button>
+<button class="text-white/70 hover:scale-105 hover:brightness-110 transition-all duration-300 active:scale-95">
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">favorite</span>
+</button>
+</div>
+</header>
+<!-- Overlay & Confetti Container -->
+<main class="relative z-10 flex-1 flex items-center justify-center p-6">
+<!-- Abstract Confetti Pieces (Decorative) -->
+<div class="absolute inset-0 pointer-events-none overflow-hidden">
+<div class="absolute top-[10%] left-[20%] w-4 h-4 bg-primary rotate-45 rounded-sm"></div>
+<div class="absolute top-[30%] right-[15%] w-6 h-6 bg-secondary rotate-12 rounded-full"></div>
+<div class="absolute bottom-[20%] left-[10%] w-5 h-5 bg-tertiary -rotate-12 rounded-sm"></div>
+<div class="absolute top-[50%] left-[5%] w-3 h-8 bg-primary-container rounded-full blur-[1px]"></div>
+<div class="absolute bottom-[40%] right-[10%] w-4 h-4 bg-secondary-fixed rotate-45"></div>
+<div class="absolute top-[20%] right-[30%] w-8 h-2 bg-tertiary-fixed rounded-full"></div>
+<div class="absolute bottom-[10%] right-[40%] w-5 h-5 bg-primary-dim rotate-12 rounded-full"></div>
+</div>
+<!-- Success Modal -->
+<section class="w-full max-w-lg bg-surface-container-high rounded-xl p-1 shadow-[0_20px_60px_rgba(0,0,0,0.8)] relative overflow-hidden">
+<!-- 3D Offset Border Effect -->
+<div class="bg-surface-container rounded-[2.8rem] p-8 text-center flex flex-col items-center gap-8 border-b-8 border-surface-container-highest">
+<!-- Stars Celebration -->
+<div class="flex justify-center items-end gap-2 -mt-4">
+<span class="material-symbols-outlined text-primary-dim text-6xl star-shadow -rotate-12" style="font-variation-settings: 'FILL' 1;">stars</span>
+<span class="material-symbols-outlined text-primary text-8xl star-shadow -translate-y-4" style="font-variation-settings: 'FILL' 1;">stars</span>
+<span class="material-symbols-outlined text-primary-dim text-6xl star-shadow rotate-12" style="font-variation-settings: 'FILL' 1;">stars</span>
+</div>
+<!-- Headline -->
+<div class="space-y-2">
+<h1 class="font-headline text-5xl font-extrabold text-primary tracking-tight leading-none uppercase">
+                        Level Complete!
+                    </h1>
+<p class="text-secondary text-2xl font-bold font-headline">Amazing Job, Explorer!</p>
+</div>
+<!-- Score Summary Bento Box -->
+<div class="w-full bg-surface-container-low rounded-lg p-6 flex flex-col items-center gap-2 border-4 border-outline-variant/20">
+<span class="text-on-surface-variant font-headline uppercase tracking-widest text-sm">Final Score</span>
+<div class="text-primary-container font-headline text-6xl font-black tabular-nums">
+                        1,500
+                    </div>
+</div>
+<!-- Actions -->
+<div class="flex flex-col sm:flex-row gap-4 w-full">
+<!-- Play Again Button (Green) -->
+<button class="flex-1 bg-secondary hover:bg-secondary-fixed transition-all duration-200 active:scale-95 group relative rounded-xl px-8 py-5 border-b-[6px] border-on-secondary-fixed-variant">
+<div class="flex items-center justify-center gap-3">
+<span class="material-symbols-outlined text-on-secondary font-bold" style="font-variation-settings: 'FILL' 1;">replay</span>
+<span class="font-headline font-black text-on-secondary text-xl">PLAY AGAIN</span>
+</div>
+</button>
+<!-- Home Button (Blue/Surface Bright) -->
+<button class="flex-1 bg-surface-bright hover:brightness-125 transition-all duration-200 active:scale-95 group relative rounded-xl px-8 py-5 border-b-[6px] border-surface-container-highest">
+<div class="flex items-center justify-center gap-3">
+<span class="material-symbols-outlined text-on-surface font-bold" style="font-variation-settings: 'FILL' 1;">home</span>
+<span class="font-headline font-black text-on-surface text-xl">HOME</span>
+</div>
+</button>
+</div>
+</div>
+</section>
+</main>
+<!-- Bottom Navigation Anchor (Manual Implementation of Shared Components) -->
+<nav class="fixed bottom-0 left-0 w-full z-50 flex justify-around items-center px-8 pb-4 bg-[#000341]/80 backdrop-blur-2xl rounded-t-[3rem] h-24 shadow-[0_-10px_40px_rgba(0,3,65,0.5)]">
+<!-- Home (Inactive) -->
+<a class="flex flex-col items-center justify-center text-white/60 p-2 hover:text-white transition-colors active:scale-90 transition-transform duration-200" href="#">
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">home</span>
+<span class="font-body font-bold text-sm">Home</span>
+</a>
+<!-- Progress (Active Selection for Achievement Context) -->
+<a class="flex flex-col items-center justify-center bg-lime-400 text-[#000341] rounded-full p-4 transform -translate-y-4 shadow-[0_0_20px_rgba(163,230,53,0.6)] active:scale-90 transition-transform duration-200" href="#">
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">rocket_launch</span>
+<span class="font-body font-bold text-sm">Progress</span>
+</a>
+<!-- Settings (Inactive) -->
+<a class="flex flex-col items-center justify-center text-white/60 p-2 hover:text-white transition-colors active:scale-90 transition-transform duration-200" href="#">
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">settings</span>
+<span class="font-body font-bold text-sm">Settings</span>
+</a>
+</nav>
+</body></html>

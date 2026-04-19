@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Mouse Masters - Galactic Playground</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;700;800&amp;family=Be_Vietnam_Pro:wght@400;500;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            "colors": {
+                    "outline": "#646dc8",
+                    "error": "#ff6e84",
+                    "outline-variant": "#353e97",
+                    "secondary-fixed": "#3fff8b",
+                    "secondary-fixed-dim": "#24f07e",
+                    "surface-container-high": "#000873",
+                    "primary-fixed-dim": "#edc600",
+                    "primary-dim": "#edc600",
+                    "on-tertiary": "#481900",
+                    "tertiary-fixed": "#ff955e",
+                    "background": "#000341",
+                    "surface-container-lowest": "#000000",
+                    "on-primary": "#635200",
+                    "tertiary-fixed-dim": "#ff7f36",
+                    "on-surface": "#e3e3ff",
+                    "on-tertiary-fixed-variant": "#642600",
+                    "primary-container": "#fdd400",
+                    "on-primary-fixed-variant": "#645300",
+                    "inverse-primary": "#715d00",
+                    "on-tertiary-fixed": "#2f0e00",
+                    "tertiary-dim": "#ff7520",
+                    "on-primary-container": "#594a00",
+                    "on-secondary-fixed": "#004820",
+                    "on-error-container": "#ffb2b9",
+                    "on-secondary-container": "#e3ffe4",
+                    "error-container": "#a70138",
+                    "surface-variant": "#000b84",
+                    "on-background": "#e3e3ff",
+                    "on-error": "#490013",
+                    "surface-tint": "#ffe483",
+                    "on-surface-variant": "#9ba4ff",
+                    "error-dim": "#d73357",
+                    "surface-container-highest": "#000b84",
+                    "on-secondary-fixed-variant": "#006832",
+                    "surface-bright": "#000e96",
+                    "tertiary-container": "#fd6c00",
+                    "on-tertiary-container": "#321000",
+                    "surface-container": "#000662",
+                    "surface": "#000341",
+                    "inverse-on-surface": "#434ca5",
+                    "inverse-surface": "#fbf8ff",
+                    "on-secondary": "#005d2c",
+                    "secondary-container": "#006d35",
+                    "secondary-dim": "#24f07e",
+                    "primary-fixed": "#fdd400",
+                    "secondary": "#3fff8b",
+                    "surface-container-low": "#000450",
+                    "tertiary": "#ff833f",
+                    "primary": "#ffe483",
+                    "on-primary-fixed": "#433700",
+                    "surface-dim": "#000341"
+            },
+            "borderRadius": {
+                    "DEFAULT": "1rem",
+                    "lg": "2rem",
+                    "xl": "3rem",
+                    "full": "9999px"
+            },
+            "fontFamily": {
+                    "headline": ["Plus Jakarta Sans"],
+                    "body": ["Be Vietnam Pro"],
+                    "label": ["Plus Jakarta Sans"]
+            }
+          },
+        },
+      }
+    </script>
+<style>
+        body { font-family: 'Be Vietnam Pro', sans-serif; }
+        h1, h2, h3 { font-family: 'Plus Jakarta Sans', sans-serif; }
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        .text-shadow-glow {
+            text-shadow: 0 0 15px rgba(255, 228, 131, 0.4);
+        }
+    </style>
+</head>
+<body class="bg-background text-on-background min-h-screen selection:bg-primary selection:text-on-primary">
+<!-- TopAppBar Shell -->
+<header class="fixed top-0 left-0 w-full z-50 flex justify-between items-center px-6 py-4 bg-[#000341]/60 backdrop-blur-xl rounded-b-3xl shadow-[0_10px_30px_rgba(255,228,131,0.1)]">
+<div class="flex items-center gap-3">
+<div class="w-10 h-10 bg-primary-container rounded-full flex items-center justify-center text-on-primary-container shadow-lg">
+<span class="material-symbols-outlined" data-icon="mouse">mouse</span>
+</div>
+<h1 class="text-2xl font-black text-yellow-400 uppercase tracking-wide font-headline">Mouse Masters</h1>
+</div>
+<div class="hidden md:flex items-center gap-8 font-headline font-bold">
+<button class="text-yellow-400 transition-all duration-300 hover:scale-105 active:scale-95">Home</button>
+<button class="text-white/70 transition-all duration-300 hover:scale-105 hover:brightness-110 active:scale-95">Progress</button>
+<button class="text-white/70 transition-all duration-300 hover:scale-105 hover:brightness-110 active:scale-95">Settings</button>
+</div>
+<div class="flex items-center gap-4">
+<button class="p-2 transition-all duration-300 hover:scale-105 hover:brightness-110 active:scale-95 text-yellow-400">
+<span class="material-symbols-outlined" data-icon="timer">timer</span>
+</button>
+<button class="p-2 transition-all duration-300 hover:scale-105 hover:brightness-110 active:scale-95 text-yellow-400">
+<span class="material-symbols-outlined" data-icon="stars">stars</span>
+</button>
+<button class="p-2 transition-all duration-300 hover:scale-105 hover:brightness-110 active:scale-95 text-yellow-400">
+<span class="material-symbols-outlined" data-icon="favorite">favorite</span>
+</button>
+</div>
+</header>
+<main class="pt-32 pb-32 px-6 max-w-7xl mx-auto relative overflow-hidden">
+<!-- Background Accents -->
+<div class="absolute top-20 right-0 w-96 h-96 bg-primary/5 rounded-full blur-[100px] -z-10"></div>
+<div class="absolute bottom-40 left-0 w-80 h-80 bg-secondary/10 rounded-full blur-[80px] -z-10"></div>
+<!-- Hero Section -->
+<section class="text-center mb-16 flex flex-col items-center">
+<div class="relative group cursor-pointer mb-6">
+<div class="absolute inset-0 bg-primary/20 blur-3xl rounded-full scale-125 group-hover:scale-150 transition-transform duration-700"></div>
+<div class="relative w-48 h-48 md:w-64 md:h-64 rounded-full bg-surface-container-high border-4 border-primary/30 flex items-center justify-center p-4">
+<img alt="Cute Mouse Hero" class="w-full h-full object-contain drop-shadow-[0_20px_20px_rgba(255,228,131,0.3)] group-hover:rotate-6 transition-transform duration-300" data-alt="A cute, friendly cartoon mouse with big round ears wearing space goggles and holding a glowing yellow futuristic computer mouse, vibrant colors" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCozzls-SQopR1y9dO9ecL4niAeD64NtQGfdv9v7Vcu433EAfG5gmpMoId4rztkRxKki13zhlTh91DTL143bSu0GL1CgudFbD6_qz1x2cfm_G6c3fZ-hrlSQeO8aEp32LBdCrjV6ClFAXAPQAUxkPSsnUgLJXUxCxCEO-VySeKRKNmdcLBbFyTX7LGf8LLTGO1ZQuOxMaBYeTdtCQn0jJQ4WoSbJcdp_hs2dCLo6pToU3kc7b_P-PUgRmBnNl65WopF5UG7BNX4jlQ"/>
+</div>
+</div>
+<h2 class="text-4xl md:text-6xl font-black text-primary mb-4 text-shadow-glow tracking-tight uppercase">Mouse Masters</h2>
+<p class="text-xl md:text-2xl text-on-surface-variant font-medium max-w-lg">Learn to use your mouse while having fun!</p>
+</section>
+<!-- Games Bento Grid -->
+<div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+<!-- Game 1: Dragon Drop -->
+<div class="group relative bg-surface-container-low rounded-lg p-1 transition-all duration-300 hover:-translate-y-2">
+<div class="bg-surface-container rounded-[1.8rem] p-6 h-full flex flex-col border-b-4 border-secondary/20 group-hover:border-secondary transition-colors">
+<div class="w-16 h-16 bg-secondary-container rounded-xl flex items-center justify-center mb-6 shadow-lg">
+<span class="material-symbols-outlined text-secondary text-4xl" data-icon="dragon">pets</span>
+</div>
+<h3 class="text-2xl font-bold mb-2">Dragon Drop</h3>
+<p class="text-on-surface-variant text-sm mb-4">Learn: <span class="text-secondary font-bold">Click &amp; Drag</span></p>
+<div class="flex items-center gap-1 mb-8">
+<span class="material-symbols-outlined text-primary" data-icon="star" data-weight="fill" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-primary" data-icon="star" data-weight="fill" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-on-surface-variant/30" data-icon="star">star</span>
+</div>
+<div class="mt-auto">
+<button class="w-full py-4 bg-secondary text-on-secondary-fixed font-headline font-black text-xl rounded-xl shadow-[0_4px_0_#006832] active:translate-y-1 active:shadow-none transition-all flex items-center justify-center gap-2 group-hover:brightness-110">
+                            PLAY
+                            <span class="material-symbols-outlined" data-icon="play_arrow">play_arrow</span>
+</button>
+</div>
+</div>
+</div>
+<!-- Game 2: Shape Finder -->
+<div class="group relative bg-surface-container-low rounded-lg p-1 transition-all duration-300 hover:-translate-y-2">
+<div class="bg-surface-container rounded-[1.8rem] p-6 h-full flex flex-col border-b-4 border-primary/20 group-hover:border-primary transition-colors">
+<div class="w-16 h-16 bg-primary-container rounded-xl flex items-center justify-center mb-6 shadow-lg">
+<span class="material-symbols-outlined text-on-primary-container text-4xl" data-icon="category">category</span>
+</div>
+<h3 class="text-2xl font-bold mb-2">Shape Finder</h3>
+<p class="text-on-surface-variant text-sm mb-4">Learn: <span class="text-primary font-bold">Double Click</span></p>
+<div class="flex items-center gap-1 mb-8">
+<span class="material-symbols-outlined text-primary" data-icon="star" data-weight="fill" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-primary" data-icon="star" data-weight="fill" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-primary" data-icon="star" data-weight="fill" style="font-variation-settings: 'FILL' 1;">star</span>
+</div>
+<div class="mt-auto">
+<button class="w-full py-4 bg-primary text-on-primary font-headline font-black text-xl rounded-xl shadow-[0_4px_0_#645300] active:translate-y-1 active:shadow-none transition-all flex items-center justify-center gap-2 group-hover:brightness-110">
+                            PLAY
+                            <span class="material-symbols-outlined" data-icon="play_arrow">play_arrow</span>
+</button>
+</div>
+</div>
+</div>
+<!-- Game 3: Rocket Rush -->
+<div class="group relative bg-surface-container-low rounded-lg p-1 transition-all duration-300 hover:-translate-y-2">
+<div class="bg-surface-container rounded-[1.8rem] p-6 h-full flex flex-col border-b-4 border-tertiary/20 group-hover:border-tertiary transition-colors">
+<div class="w-16 h-16 bg-tertiary-container rounded-xl flex items-center justify-center mb-6 shadow-lg">
+<span class="material-symbols-outlined text-on-tertiary-container text-4xl" data-icon="rocket_launch">rocket_launch</span>
+</div>
+<h3 class="text-2xl font-bold mb-2">Rocket Rush</h3>
+<p class="text-on-surface-variant text-sm mb-4">Learn: <span class="text-tertiary font-bold">Left &amp; Right Click</span></p>
+<div class="flex items-center gap-1 mb-8">
+<span class="material-symbols-outlined text-primary" data-icon="star" data-weight="fill" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-on-surface-variant/30" data-icon="star">star</span>
+<span class="material-symbols-outlined text-on-surface-variant/30" data-icon="star">star</span>
+</div>
+<div class="mt-auto">
+<button class="w-full py-4 bg-tertiary text-on-tertiary-container font-headline font-black text-xl rounded-xl shadow-[0_4px_0_#321000] active:translate-y-1 active:shadow-none transition-all flex items-center justify-center gap-2 group-hover:brightness-110">
+                            PLAY
+                            <span class="material-symbols-outlined" data-icon="play_arrow">play_arrow</span>
+</button>
+</div>
+</div>
+</div>
+</div>
+</main>
+<!-- BottomNavBar Shell -->
+<nav class="fixed bottom-0 left-0 w-full z-50 flex justify-around items-center px-8 pb-4 bg-[#000341]/80 backdrop-blur-2xl rounded-t-[3rem] h-24 shadow-[0_-10px_40px_rgba(0,3,65,0.5)]">
+<!-- Home Active Tab -->
+<a class="flex flex-col items-center justify-center bg-lime-400 text-[#000341] rounded-full p-4 transform -translate-y-4 shadow-[0_0_20px_rgba(163,230,53,0.6)] active:scale-90 transition-transform duration-200" href="#">
+<span class="material-symbols-outlined" data-icon="home">home</span>
+<span class="font-['Be_Vietnam_Pro'] font-bold text-xs">Home</span>
+</a>
+<!-- Progress Inactive Tab -->
+<a class="flex flex-col items-center justify-center text-white/60 p-2 hover:text-white transition-colors active:scale-90 transition-transform duration-200" href="#">
+<span class="material-symbols-outlined" data-icon="rocket_launch">rocket_launch</span>
+<span class="font-['Be_Vietnam_Pro'] font-bold text-xs">Progress</span>
+</a>
+<!-- Settings Inactive Tab -->
+<a class="flex flex-col items-center justify-center text-white/60 p-2 hover:text-white transition-colors active:scale-90 transition-transform duration-200" href="#">
+<span class="material-symbols-outlined" data-icon="settings">settings</span>
+<span class="font-['Be_Vietnam_Pro'] font-bold text-xs">Settings</span>
+</a>
+</nav>
+<!-- FAB (Suppressed as per rules on Dashboard if logic suggests focused task, but typically visible on Home. Adding as "Start Quest" button) -->
+<button class="fixed bottom-32 right-6 w-16 h-16 bg-primary-container text-on-primary-container rounded-full flex items-center justify-center shadow-[0_10px_30px_rgba(253,212,0,0.4)] md:hidden transition-transform active:scale-90 z-40">
+<span class="material-symbols-outlined scale-150" data-icon="rocket">rocket</span>
+</button>
+</body></html>

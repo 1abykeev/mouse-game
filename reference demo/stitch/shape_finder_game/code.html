@@ -1,0 +1,216 @@
+<html class="dark"><head><meta charset="utf-8"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@700;800&amp;family=Be_Vietnam_Pro:wght@400;500;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<style>
+    .material-symbols-outlined {
+      font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 48;
+    }
+    .shape-burst {
+      box-shadow: 0 0 40px rgba(63, 255, 139, 0.6);
+    }
+    .timer-ring {
+      transition: stroke-dashoffset 0.1s linear;
+    }
+  </style>
+<script id="tailwind-config">
+    tailwind.config = {
+      darkMode: "class",
+      theme: {
+        extend: {
+          "colors": {
+            "outline": "#646dc8",
+            "error": "#ff6e84",
+            "outline-variant": "#353e97",
+            "secondary-fixed": "#3fff8b",
+            "secondary-fixed-dim": "#24f07e",
+            "surface-container-high": "#000873",
+            "primary-fixed-dim": "#edc600",
+            "primary-dim": "#edc600",
+            "on-tertiary": "#481900",
+            "tertiary-fixed": "#ff955e",
+            "background": "#000341",
+            "surface-container-lowest": "#000000",
+            "on-primary": "#635200",
+            "tertiary-fixed-dim": "#ff7f36",
+            "on-surface": "#e3e3ff",
+            "on-tertiary-fixed-variant": "#642600",
+            "primary-container": "#fdd400",
+            "on-primary-fixed-variant": "#645300",
+            "inverse-primary": "#715d00",
+            "on-tertiary-fixed": "#2f0e00",
+            "tertiary-dim": "#ff7520",
+            "on-primary-container": "#594a00",
+            "on-secondary-fixed": "#004820",
+            "on-error-container": "#ffb2b9",
+            "on-secondary-container": "#e3ffe4",
+            "error-container": "#a70138",
+            "surface-variant": "#000b84",
+            "on-background": "#e3e3ff",
+            "on-error": "#490013",
+            "surface-tint": "#ffe483",
+            "on-surface-variant": "#9ba4ff",
+            "error-dim": "#d73357",
+            "surface-container-highest": "#000b84",
+            "on-secondary-fixed-variant": "#006832",
+            "surface-bright": "#000e96",
+            "tertiary-container": "#fd6c00",
+            "on-tertiary-container": "#321000",
+            "surface-container": "#000662",
+            "surface": "#000341",
+            "inverse-on-surface": "#434ca5",
+            "inverse-surface": "#fbf8ff",
+            "on-secondary": "#005d2c",
+            "secondary-container": "#006d35",
+            "secondary-dim": "#24f07e",
+            "primary-fixed": "#fdd400",
+            "secondary": "#3fff8b",
+            "surface-container-low": "#000450",
+            "tertiary": "#ff833f",
+            "primary": "#ffe483",
+            "on-primary-fixed": "#433700",
+            "surface-dim": "#000341"
+          },
+          "borderRadius": {
+            "DEFAULT": "1rem",
+            "lg": "2rem",
+            "xl": "3rem",
+            "full": "9999px"
+          },
+          "fontFamily": {
+            "headline": ["Plus Jakarta Sans"],
+            "body": ["Be Vietnam Pro"],
+            "label": ["Plus Jakarta Sans"]
+          }
+        },
+      },
+    }
+  </script>
+</head>
+<body class="bg-background text-on-surface font-body selection:bg-primary selection:text-on-primary">
+<!-- TopAppBar Execution -->
+<header class="fixed top-0 left-0 w-full z-50 flex justify-between items-center px-6 py-4 bg-[#000341]/60 backdrop-blur-xl rounded-b-3xl shadow-[0_10px_30px_rgba(255,228,131,0.1)]">
+<div class="flex items-center gap-4">
+<div class="text-2xl font-black text-yellow-400 uppercase font-headline tracking-wide">Mouse Masters</div>
+<div class="h-8 w-[2px] bg-white/20 hidden md:block"></div>
+<div class="hidden md:flex gap-6 items-center">
+<span class="text-yellow-400 font-bold hover:scale-105 transition-all cursor-pointer">Home</span>
+<span class="text-white/70 font-bold hover:scale-105 transition-all cursor-pointer">Progress</span>
+<span class="text-white/70 font-bold hover:scale-105 transition-all cursor-pointer">Settings</span>
+</div>
+</div>
+<!-- Game Stats -->
+<div class="flex items-center gap-4">
+<div class="flex items-center gap-2 bg-surface-container-highest px-4 py-2 rounded-full border-b-4 border-on-primary-fixed-variant">
+<span class="material-symbols-outlined text-primary-fixed-dim" style="font-variation-settings: 'FILL' 1;">stars</span>
+<span class="font-headline font-extrabold text-primary">450</span>
+</div>
+<div class="flex items-center gap-2 bg-surface-container-highest px-4 py-2 rounded-full border-b-4 border-outline-variant">
+<span class="material-symbols-outlined text-secondary-fixed" style="font-variation-settings: 'FILL' 1;">rocket_launch</span>
+<span class="font-headline font-extrabold text-secondary">Lvl 4</span>
+</div>
+<div class="flex items-center gap-1 ml-2">
+<span class="material-symbols-outlined text-error text-3xl" style="font-variation-settings: 'FILL' 1;">favorite</span>
+<span class="material-symbols-outlined text-error text-3xl" style="font-variation-settings: 'FILL' 1;">favorite</span>
+<span class="material-symbols-outlined text-white/20 text-3xl">favorite</span>
+</div>
+</div>
+</header>
+<main class="min-h-screen pt-28 pb-32 px-6 flex flex-col items-center max-w-6xl mx-auto">
+<!-- Instruction Banner -->
+<section class="w-full mb-12 relative">
+<div class="bg-surface-container-high rounded-xl p-8 border-b-[8px] border-surface-variant flex flex-col md:flex-row items-center justify-between gap-6 shadow-2xl relative overflow-hidden">
+<!-- Background Glow -->
+<div class="absolute -top-12 -left-12 w-48 h-48 bg-primary/10 blur-[80px] rounded-full"></div>
+<div class="relative z-10 flex flex-col items-center md:items-start text-center md:text-left">
+<h2 class="text-on-surface-variant font-headline font-bold uppercase tracking-widest text-lg mb-2">Current Quest</h2>
+<h1 class="text-4xl md:text-6xl font-headline font-black text-primary leading-tight">
+            DOUBLE CLICK THE: <span class="inline-flex items-center px-4 py-2 bg-surface-bright rounded-2xl shadow-inner ml-2"><span class="text-secondary mr-3 text-5xl">🔵</span> CIRCLE</span>
+</h1>
+</div>
+<!-- Shrinking Circle Timer -->
+<div class="relative flex items-center justify-center w-32 h-32 shrink-0">
+<svg class="w-full h-full -rotate-90">
+<circle class="text-surface-variant" cx="64" cy="64" fill="transparent" r="56" stroke="currentColor" stroke-width="8"></circle>
+<circle class="text-secondary timer-ring" cx="64" cy="64" fill="transparent" r="56" stroke="currentColor" stroke-dasharray="351.8" stroke-dashoffset="100" stroke-width="8"></circle>
+</svg>
+<div class="absolute flex flex-col items-center">
+<span class="material-symbols-outlined text-4xl text-secondary">timer</span>
+<span class="font-headline font-bold text-xl">12s</span>
+</div>
+</div>
+</div>
+</section>
+<!-- Game Area: Bento Grid of Shapes -->
+<div class="grid grid-cols-2 md:grid-cols-4 gap-6 w-full">
+<!-- Correct Choice Example (Circle) -->
+<button class="aspect-square bg-surface-container-low rounded-xl flex items-center justify-center relative group active:scale-95 transition-all duration-200 border-b-8 border-surface-container shadow-xl overflow-hidden shape-burst bg-secondary/10">
+<div class="absolute inset-0 bg-gradient-to-br from-secondary/20 to-transparent"></div>
+<div class="w-3/4 h-3/4 rounded-full bg-secondary shadow-[0_0_40px_rgba(63,255,139,0.4)] flex items-center justify-center border-b-8 border-on-secondary-fixed-variant">
+<span class="material-symbols-outlined text-white text-6xl" style="font-variation-settings: 'FILL' 1;">check_circle</span>
+</div>
+<!-- Burst Decoration -->
+<div class="absolute inset-0 pointer-events-none">
+<div class="absolute top-4 left-1/2 -translate-x-1/2 w-2 h-8 bg-secondary rounded-full animate-pulse"></div>
+<div class="absolute bottom-4 left-1/2 -translate-x-1/2 w-2 h-8 bg-secondary rounded-full animate-pulse"></div>
+<div class="absolute left-4 top-1/2 -translate-y-1/2 h-2 w-8 bg-secondary rounded-full animate-pulse"></div>
+<div class="absolute right-4 top-1/2 -translate-y-1/2 h-2 w-8 bg-secondary rounded-full animate-pulse"></div>
+</div>
+</button>
+<!-- Square -->
+<button class="aspect-square bg-surface-container-low rounded-xl flex items-center justify-center group active:scale-95 transition-all duration-200 border-b-8 border-surface-container shadow-xl">
+<div class="w-3/4 h-3/4 rounded-lg bg-tertiary flex items-center justify-center border-b-8 border-on-tertiary-fixed-variant"></div>
+</button>
+<!-- Star -->
+<button class="aspect-square bg-surface-container-low rounded-xl flex items-center justify-center group active:scale-95 transition-all duration-200 border-b-8 border-surface-container shadow-xl">
+<div class="relative w-3/4 h-3/4 flex items-center justify-center">
+<span class="material-symbols-outlined text-primary text-[8rem]" style="font-variation-settings: 'FILL' 1;">star</span>
+<div class="absolute bottom-4 w-1/2 h-2 bg-on-primary-fixed-variant/30 rounded-full blur-sm"></div>
+</div>
+</button>
+<!-- Triangle (Represented as Polygon) -->
+<button class="aspect-square bg-surface-container-low rounded-xl flex items-center justify-center group active:scale-95 transition-all duration-200 border-b-8 border-surface-container shadow-xl">
+<div class="w-0 h-0 border-l-[60px] border-l-transparent border-r-[60px] border-r-transparent border-bottom-[100px] border-b-error relative">
+<div class="absolute top-[20px] -left-[60px] w-0 h-0 border-l-[60px] border-l-transparent border-r-[60px] border-r-transparent border-b-[100px] border-b-error brightness-90"></div>
+</div>
+</button>
+<!-- Another Circle (Distractor) -->
+<button class="aspect-square bg-surface-container-low rounded-xl flex items-center justify-center group active:scale-95 transition-all duration-200 border-b-8 border-surface-container shadow-xl">
+<div class="w-3/4 h-3/4 rounded-full bg-outline flex items-center justify-center border-b-8 border-outline-variant"></div>
+</button>
+<!-- Star (Distractor) -->
+<button class="aspect-square bg-surface-container-low rounded-xl flex items-center justify-center group active:scale-95 transition-all duration-200 border-b-8 border-surface-container shadow-xl">
+<div class="relative w-3/4 h-3/4 flex items-center justify-center">
+<span class="material-symbols-outlined text-secondary-fixed text-[8rem]" style="font-variation-settings: 'FILL' 1;">star</span>
+</div>
+</button>
+<!-- Square (Distractor) -->
+<button class="aspect-square bg-surface-container-low rounded-xl flex items-center justify-center group active:scale-95 transition-all duration-200 border-b-8 border-surface-container shadow-xl">
+<div class="w-3/4 h-3/4 rounded-lg bg-tertiary-dim flex items-center justify-center border-b-8 border-on-tertiary-fixed-variant opacity-80"></div>
+</button>
+<!-- Circle (Correct Target) -->
+<button class="aspect-square bg-surface-container-low rounded-xl flex items-center justify-center group active:scale-95 transition-all duration-200 border-b-8 border-surface-container shadow-xl">
+<div class="w-3/4 h-3/4 rounded-full bg-secondary flex items-center justify-center border-b-8 border-on-secondary-fixed-variant transition-transform group-hover:scale-110"></div>
+</button>
+</div>
+</main>
+<!-- BottomNavBar Execution -->
+<nav class="fixed bottom-0 left-0 w-full z-50 flex justify-around items-center px-8 pb-4 bg-[#000341]/80 backdrop-blur-2xl rounded-t-[3rem] h-24 shadow-[0_-10px_40px_rgba(0,3,65,0.5)]">
+<div class="flex flex-col items-center justify-center text-white/60 p-2 hover:text-white transition-colors active:scale-90 duration-200 cursor-pointer">
+<span class="material-symbols-outlined text-3xl">home</span>
+<span class="font-['Be_Vietnam_Pro'] font-bold text-sm">Home</span>
+</div>
+<div class="flex flex-col items-center justify-center bg-lime-400 text-[#000341] rounded-full p-4 transform -translate-y-4 shadow-[0_0_20px_rgba(163,230,53,0.6)] active:scale-90 transition-transform duration-200 cursor-pointer">
+<span class="material-symbols-outlined text-4xl">rocket_launch</span>
+<span class="font-['Be_Vietnam_Pro'] font-bold text-sm">Progress</span>
+</div>
+<div class="flex flex-col items-center justify-center text-white/60 p-2 hover:text-white transition-colors active:scale-90 duration-200 cursor-pointer">
+<span class="material-symbols-outlined text-3xl">settings</span>
+<span class="font-['Be_Vietnam_Pro'] font-bold text-sm">Settings</span>
+</div>
+</nav>
+<!-- Decorative Cosmic Elements -->
+<div class="fixed top-1/4 -right-20 w-64 h-64 bg-primary/5 blur-[100px] rounded-full pointer-events-none"></div>
+<div class="fixed bottom-1/4 -left-20 w-80 h-80 bg-secondary/5 blur-[120px] rounded-full pointer-events-none"></div>
+</body></html>
