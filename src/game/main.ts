@@ -5,7 +5,7 @@ import { DragonDrop } from './scenes/DragonDrop';
 import { ShapeFinder } from './scenes/ShapeFinder';
 import { RocketRush } from './scenes/RocketRush';
 import { GameOver } from './scenes/GameOver';
-import { AUTO, Game } from 'phaser';
+import { AUTO, Game, Scale } from 'phaser';
 
 const config: Phaser.Types.Core.GameConfig = {
     type: AUTO,
@@ -13,6 +13,10 @@ const config: Phaser.Types.Core.GameConfig = {
     height: 768,
     parent: 'game-container',
     backgroundColor: '#000341',
+    scale: {
+        mode:       Scale.FIT,
+        autoCenter: Scale.CENTER_BOTH,
+    },
     scene: [
         Boot,
         Preloader,
