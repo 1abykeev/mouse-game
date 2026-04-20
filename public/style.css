@@ -1,26 +1,18 @@
-* {
-    box-sizing: border-box;
-}
+/* Minimal global reset — Tailwind preflight handles the rest */
+*, *::before, *::after { box-sizing: border-box; }
 
-html,
-body {
+html, body {
     margin: 0;
     padding: 0;
     width: 100%;
     height: 100%;
     overflow: hidden;
-    background-color: #000341;
-    color: rgba(255, 255, 255, 0.87);
+    background-color: #000341;   /* matches --color-background, prevents flash */
 }
 
 #app {
     width: 100%;
     height: 100%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-
-#game-container canvas {
-    display: block;
+    overflow-y: auto;
+    overflow-x: hidden;
 }

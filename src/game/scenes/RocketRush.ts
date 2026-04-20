@@ -1,4 +1,5 @@
 import { Scene } from 'phaser';
+import { returnToDashboard } from '../PhaserBridge';
 
 /**
  * RocketRush — Left & right click rocket dodge game.
@@ -56,6 +57,6 @@ export class RocketRush extends Scene {
 
         btn.on('pointerover', () => btn.setColor('#ffffff'));
         btn.on('pointerout',  () => btn.setColor('#ff833f'));
-        btn.on('pointerdown', () => this.scene.start('Dashboard'));
+        btn.on('pointerdown', () => returnToDashboard());
     }
 }

@@ -1,4 +1,5 @@
 import { Scene } from 'phaser';
+import { returnToDashboard } from '../PhaserBridge';
 
 /**
  * ShapeFinder — Double-click shape matching game.
@@ -56,6 +57,6 @@ export class ShapeFinder extends Scene {
 
         btn.on('pointerover', () => btn.setColor('#ffffff'));
         btn.on('pointerout',  () => btn.setColor('#ffe483'));
-        btn.on('pointerdown', () => this.scene.start('Dashboard'));
+        btn.on('pointerdown', () => returnToDashboard());
     }
 }

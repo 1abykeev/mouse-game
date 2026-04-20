@@ -1,0 +1,75 @@
+@import "tailwindcss";
+
+@theme {
+    /* ── Typography ─────────────────────────────────────────────────────── */
+    --font-headline: "Plus Jakarta Sans", sans-serif;
+    --font-body:     "Be Vietnam Pro", sans-serif;
+
+    /* ── Border radius (matches DESIGN.md scale) ────────────────────────── */
+    --radius:    1rem;
+    --radius-lg: 2rem;
+    --radius-xl: 3rem;
+
+    /* ── Colour tokens (from reference DESIGN.md palette) ───────────────── */
+    --color-background:                #000341;
+    --color-surface:                   #000341;
+    --color-surface-dim:               #000341;
+    --color-surface-bright:            #000e96;
+    --color-surface-container-lowest:  #000000;
+    --color-surface-container-low:     #000450;
+    --color-surface-container:         #000662;
+    --color-surface-container-high:    #000873;
+    --color-surface-container-highest: #000b84;
+    --color-surface-variant:           #000b84;
+    --color-surface-tint:              #ffe483;
+    --color-on-surface:                #e3e3ff;
+    --color-on-surface-variant:        #9ba4ff;
+    --color-inverse-surface:           #fbf8ff;
+    --color-inverse-on-surface:        #434ca5;
+
+    --color-primary:                   #ffe483;
+    --color-primary-dim:               #edc600;
+    --color-primary-fixed:             #fdd400;
+    --color-primary-container:         #fdd400;
+    --color-on-primary:                #635200;
+    --color-on-primary-fixed:          #433700;
+    --color-on-primary-fixed-variant:  #645300;
+    --color-on-primary-container:      #594a00;
+    --color-inverse-primary:           #715d00;
+
+    --color-secondary:                 #3fff8b;
+    --color-secondary-dim:             #24f07e;
+    --color-secondary-fixed:           #3fff8b;
+    --color-secondary-container:       #006d35;
+    --color-on-secondary:              #005d2c;
+    --color-on-secondary-fixed:        #004820;
+    --color-on-secondary-fixed-variant:#006832;
+    --color-on-secondary-container:    #e3ffe4;
+
+    --color-tertiary:                  #ff833f;
+    --color-tertiary-dim:              #ff7520;
+    --color-tertiary-fixed:            #ff955e;
+    --color-tertiary-container:        #fd6c00;
+    --color-on-tertiary:               #481900;
+    --color-on-tertiary-fixed:         #2f0e00;
+    --color-on-tertiary-container:     #321000;
+
+    --color-outline:                   #646dc8;
+    --color-outline-variant:           #353e97;
+
+    --color-error:                     #ff6e84;
+    --color-error-container:           #a70138;
+    --color-on-error:                  #490013;
+    --color-on-error-container:        #ffb2b9;
+}
+
+/* Material Symbols base variation (overridden per-element with inline style) */
+.material-symbols-outlined {
+    font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+    user-select: none;
+}
+
+/* Glow text effect for hero heading */
+.text-glow {
+    text-shadow: 0 0 24px rgba(255, 228, 131, 0.5);
+}

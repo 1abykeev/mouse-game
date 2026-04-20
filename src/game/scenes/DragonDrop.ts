@@ -1,4 +1,5 @@
 import { Scene } from 'phaser';
+import { returnToDashboard } from '../PhaserBridge';
 
 /**
  * DragonDrop — Click & Drag maze game.
@@ -56,6 +57,6 @@ export class DragonDrop extends Scene {
 
         btn.on('pointerover', () => btn.setColor('#ffffff'));
         btn.on('pointerout',  () => btn.setColor('#3fff8b'));
-        btn.on('pointerdown', () => this.scene.start('Dashboard'));
+        btn.on('pointerdown', () => returnToDashboard());
     }
 }

@@ -1,4 +1,6 @@
 import { defineConfig } from 'vite';
+import react from '@vitejs/plugin-react';
+import tailwindcss from '@tailwindcss/vite';
 
 const phasermsg = () => {
     return {
@@ -23,7 +25,8 @@ export default defineConfig({
         rollupOptions: {
             output: {
                 manualChunks: {
-                    phaser: ['phaser']
+                    phaser: ['phaser'],
+                    react:  ['react', 'react-dom'],
                 }
             }
         },
@@ -42,6 +45,8 @@ export default defineConfig({
         port: 8080
     },
     plugins: [
-        phasermsg()
+        react(),
+        tailwindcss(),
+        phasermsg(),
     ]
 });
