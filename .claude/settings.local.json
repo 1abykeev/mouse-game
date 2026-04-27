@@ -5,7 +5,10 @@
       "Bash(npx vite *)",
       "Bash(npm install *)",
       "Bash(node -e \"console.log\\(require\\('./node_modules/@vitejs/plugin-react/package.json'\\).version\\)\")",
-      "Bash(node -e \"console.log\\(require\\('./node_modules/@vitejs/plugin-react/package.json'\\).peerDependencies\\)\")"
+      "Bash(node -e \"console.log\\(require\\('./node_modules/@vitejs/plugin-react/package.json'\\).peerDependencies\\)\")",
+      "Bash(git add *)",
+      "Bash(git commit -m ' *)",
+      "Bash(npm run *)"
     ]
   }
 }

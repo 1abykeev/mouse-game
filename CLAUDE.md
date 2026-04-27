@@ -70,6 +70,51 @@ When any game session ends, save the following JSON to localStorage under the ke
 
 ---
 
+## Tilemap Workflow (Tiled Desktop App)
+
+Game levels are built in **Tiled 1.12+** and exported as JSON, then loaded by Phaser.
+
+### Map settings
+
+| Property          | Value              |
+|-------------------|--------------------|
+| Orientation       | Orthogonal         |
+| Tile layer format | CSV                |
+| Tile render order | Right Down         |
+| Tile size         | 64 × 64 px         |
+| Map size          | 16 × 11 tiles (= 1024 × 704 px) |
+
+### Required layers (every map must have these)
+
+| Layer name | Type         | Purpose                                      |
+|------------|--------------|----------------------------------------------|
+| `floor`    | Tile Layer   | Walkable/background tiles                    |
+| `walls`    | Tile Layer   | Impassable wall tiles — used for collision   |
+| `objects`  | Object Layer | Named objects: `spawn`, `goal`, `coin`, etc. |
+
+### Export & asset placement
+
+- Export as **JSON** with **"Embed tilesets"** checked
+- Save maps to `public/assets/tilemaps/level_<N>.json`
+- Save tileset images to `public/assets/tilemaps/`
+
+### Loading in Phaser
+
+```typescript
+// preload
+this.load.tilemapTiledJSON('level1', 'assets/tilemaps/level_1.json');
+this.load.image('tiles', 'assets/tilemaps/dragon_tileset.png');
+
+// create
+const map = this.make.tilemap({ key: 'level1' });
+const tileset = map.addTilesetImage('dragon_tileset', 'tiles');
+map.createLayer('floor', tileset!);
+const wallsLayer = map.createLayer('walls', tileset!);
+wallsLayer!.setCollisionByExclusion([-1]);
+```
+
+---
+
 ## File Structure
 
 ```
