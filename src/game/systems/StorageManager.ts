@@ -14,6 +14,7 @@ export const STORAGE_KEYS = {
     DRAGON_DROP:   'mm_dragon_drop',
     SHAPE_FINDER:  'mm_shape_finder',
     ROCKET_RUSH:   'mm_rocket_rush',
+    FISHING_GAME:  'mm_fishing_game',
     LAST_SESSION:  'mm_last_session',
 } as const;
 
@@ -38,6 +39,7 @@ export interface ProgressData {
     dragonDrop:  GameRecord;
     shapeFinder: GameRecord;
     rocketRush:  GameRecord;
+    fishingGame: GameRecord;
 }
 
 // ─── Defaults ────────────────────────────────────────────────────────────────
@@ -109,6 +111,7 @@ export class StorageManager {
             dragonDrop:  { ...DEFAULT_GAME_RECORD },
             shapeFinder: { ...DEFAULT_GAME_RECORD },
             rocketRush:  { ...DEFAULT_GAME_RECORD },
+            fishingGame: { ...DEFAULT_GAME_RECORD },
         };
     }
 
@@ -121,7 +124,7 @@ export class StorageManager {
      * Stars and high score are only overwritten if the new value is better.
      */
     static updateGameRecord(
-        game:   'dragonDrop' | 'shapeFinder' | 'rocketRush',
+        game:   'dragonDrop' | 'shapeFinder' | 'rocketRush' | 'fishingGame',
         level:  number,
         stars:  number,
         score:  number,
@@ -146,12 +149,13 @@ export class StorageManager {
 
     // ── Total stars (used for dashboard display) ────────────────────────────
 
-    static getTotalStars(): { dragonDrop: number; shapeFinder: number; rocketRush: number; total: number } {
+    static getTotalStars(): { dragonDrop: number; shapeFinder: number; rocketRush: number; fishingGame: number; total: number } {
         const p = StorageManager.getProgress();
         const sum = (rec: GameRecord) => rec.stars.reduce((a, b) => a + b, 0);
         const dd = sum(p.dragonDrop);
         const sf = sum(p.shapeFinder);
         const rr = sum(p.rocketRush);
-        return { dragonDrop: dd, shapeFinder: sf, rocketRush: rr, total: dd + sf + rr };
+        const fg = sum(p.fishingGame);
+        return { dragonDrop: dd, shapeFinder: sf, rocketRush: rr, fishingGame: fg, total: dd + sf + rr + fg };
     }
 }

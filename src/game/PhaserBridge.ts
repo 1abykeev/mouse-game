@@ -8,10 +8,11 @@
  */
 
 import { Game, AUTO, Scale } from 'phaser';
-import { IdleScene }   from './scenes/IdleScene';
+import { IdleScene }    from './scenes/IdleScene';
 import { DragonDrop }  from './scenes/DragonDrop';
 import { ShapeFinder } from './scenes/ShapeFinder';
 import { RocketRush }  from './scenes/RocketRush';
+import { FishingGame } from './scenes/FishingGame';
 
 let game: Game | null = null;
 let pendingScene: string | null = null;
@@ -28,7 +29,7 @@ function createGame(containerId: string): Game {
             autoCenter: Scale.CENTER_BOTH,
         },
         // IdleScene is first → starts automatically on boot (blank dark canvas)
-        scene: [IdleScene, DragonDrop, ShapeFinder, RocketRush],
+        scene: [IdleScene, DragonDrop, ShapeFinder, RocketRush, FishingGame],
     });
 }
 

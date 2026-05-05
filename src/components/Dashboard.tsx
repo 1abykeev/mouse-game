@@ -16,7 +16,7 @@ interface GameDef {
     btnShadow:       string;
     btnText:         string;
     skillColor:      string;
-    progressKey:     'dragonDrop' | 'shapeFinder' | 'rocketRush';
+    progressKey:     'dragonDrop' | 'shapeFinder' | 'rocketRush' | 'fishingGame';
 }
 
 const GAMES: GameDef[] = [
@@ -67,6 +67,22 @@ const GAMES: GameDef[] = [
         btnText:         'text-on-tertiary-container',
         skillColor:      'text-tertiary',
         progressKey:     'rocketRush',
+    },
+    {
+        sceneKey:        'FishingGame',
+        title:           'Balık Tut',
+        skill:           'Scroll Wheel',
+        description:     'Fare tekerleğini kullanarak oltayı doğru derinliğe indir ve balık yakala!',
+        iconName:        'phishing',
+        iconBg:          'bg-[#003f6e]',
+        iconColor:       'text-[#00ccff]',
+        cardBorderBase:  'border-[#00ccff]/20',
+        cardBorderHover: 'group-hover:border-[#00ccff]',
+        btnBg:           'bg-[#005f9e]',
+        btnShadow:       'shadow-[0_4px_0_#002f4e]',
+        btnText:         'text-white',
+        skillColor:      'text-[#00ccff]',
+        progressKey:     'fishingGame',
     },
 ];
 
@@ -197,7 +213,7 @@ export default function Dashboard({ onGameSelect }: Props) {
                 </section>
 
                 {/* Game cards grid */}
-                <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+                <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
                     {GAMES.map(game => (
                         <GameCard
                             key={game.sceneKey}
