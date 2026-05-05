@@ -22,9 +22,9 @@ interface GameDef {
 const GAMES: GameDef[] = [
     {
         sceneKey:        'DragonDrop',
-        title:           'Dragon Drop',
-        skill:           'Click & Drag',
-        description:     'Navigate your mouse through the galaxy maze!',
+        title:           'Ejderha Sürükle',
+        skill:           'Tıkla & Sürükle',
+        description:     'Farenle galaksi labirentinde yol bul!',
         iconName:        'pets',
         iconBg:          'bg-secondary-container',
         iconColor:       'text-secondary',
@@ -38,9 +38,9 @@ const GAMES: GameDef[] = [
     },
     {
         sceneKey:        'ShapeFinder',
-        title:           'Shape Finder',
-        skill:           'Double Click',
-        description:     'Double-click the correct shape before time runs out!',
+        title:           'Şekil Bulucu',
+        skill:           'Çift Tıklama',
+        description:     'Süre dolmadan doğru şekle çift tıkla!',
         iconName:        'category',
         iconBg:          'bg-primary-container',
         iconColor:       'text-on-primary-container',
@@ -54,9 +54,9 @@ const GAMES: GameDef[] = [
     },
     {
         sceneKey:        'RocketRush',
-        title:           'Rocket Rush',
-        skill:           'Left & Right Click',
-        description:     'Use left & right click to dodge asteroids in space!',
+        title:           'Roket Koşusu',
+        skill:           'Sol & Sağ Tık',
+        description:     'Uzayda asteroitlerden kaçmak için sol ve sağ tıkla!',
         iconName:        'rocket_launch',
         iconBg:          'bg-tertiary-container',
         iconColor:       'text-on-tertiary-container',
@@ -71,7 +71,7 @@ const GAMES: GameDef[] = [
     {
         sceneKey:        'FishingGame',
         title:           'Balık Tut',
-        skill:           'Scroll Wheel',
+        skill:           'Fare Tekerleği',
         description:     'Fare tekerleğini kullanarak oltayı doğru derinliğe indir ve balık yakala!',
         iconName:        'phishing',
         iconBg:          'bg-[#003f6e]',
@@ -126,7 +126,7 @@ function GameCard({ game, stars, onPlay }: { game: GameDef; stars: number; onPla
 
                 {/* Skill */}
                 <p className="text-on-surface-variant text-xs mb-3">
-                    Learn:{' '}
+                    Öğren:{' '}
                     <span className={`${game.skillColor} font-bold`}>{game.skill}</span>
                 </p>
 
@@ -149,7 +149,7 @@ function GameCard({ game, stars, onPlay }: { game: GameDef; stars: number; onPla
                             group-hover:brightness-110
                         `}
                     >
-                        PLAY
+                        OYNA
                         <span className="material-symbols-outlined">play_arrow</span>
                     </button>
                 </div>
@@ -180,7 +180,7 @@ export default function Dashboard({ onGameSelect }: Props) {
                         <span className="material-symbols-outlined" style={{ fontVariationSettings: "'FILL' 1" }}>mouse</span>
                     </div>
                     <h1 className="text-2xl font-black text-primary uppercase tracking-wide font-headline">
-                        Mouse Masters
+                        Fare Ustaları
                     </h1>
                 </div>
 
@@ -205,10 +205,10 @@ export default function Dashboard({ onGameSelect }: Props) {
                 {/* Compact hero — title + subtitle only, no image */}
                 <section className="text-center mb-8">
                     <h2 className="text-3xl font-black text-primary mb-2 font-headline uppercase tracking-tight text-glow">
-                        Galactic Playground
+                        Galaktik Oyun Alanı
                     </h2>
                     <p className="text-base text-on-surface-variant font-medium">
-                        Learn to use your mouse while having fun!
+                        Eğlenirken fareyi kullanmayı öğren!
                     </p>
                 </section>
 
@@ -233,19 +233,19 @@ export default function Dashboard({ onGameSelect }: Props) {
                     className="flex flex-col items-center justify-center bg-lime-400 text-[#000341] rounded-full p-4 -translate-y-4 shadow-[0_0_20px_rgba(163,230,53,0.6)] active:scale-90 transition-transform duration-200"
                 >
                     <span className="material-symbols-outlined" style={{ fontVariationSettings: "'FILL' 1" }}>home</span>
-                    <span className="font-bold text-xs font-body">Home</span>
+                    <span className="font-bold text-xs font-body">Ana Sayfa</span>
                 </a>
 
                 {/* Progress — inactive */}
                 <a href="#" className="flex flex-col items-center justify-center text-white/60 p-2 hover:text-white transition-colors active:scale-90">
                     <span className="material-symbols-outlined">rocket_launch</span>
-                    <span className="font-bold text-xs font-body">Progress</span>
+                    <span className="font-bold text-xs font-body">İlerleme</span>
                 </a>
 
                 {/* Settings — inactive */}
                 <a href="#" className="flex flex-col items-center justify-center text-white/60 p-2 hover:text-white transition-colors active:scale-90">
                     <span className="material-symbols-outlined">settings</span>
-                    <span className="font-bold text-xs font-body">Settings</span>
+                    <span className="font-bold text-xs font-body">Ayarlar</span>
                 </a>
             </nav>
 
